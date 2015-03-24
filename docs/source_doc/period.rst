@@ -1,4 +1,4 @@
 period source documentation
 ===========================
 
-.. automodule:: fitch
+.. automodule:: period

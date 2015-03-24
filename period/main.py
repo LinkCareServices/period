@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # $Id: period.py,v 2.5 2002-01-07 11:07:57-06 annis Exp $
 # $Source: /u/annis/code/python/lib/period/RCS/period.py,v $
 #
@@ -7,7 +7,7 @@
 # under the same terms as Perl (the Artistic Licence).  Developed at
 # the Department of Biostatistics and Medical Informatics, University
 # of Wisconsin, Madison.
- 
+
 """Deal with time periods
 
 The single function in_period(time, period) determines if a given time
@@ -253,7 +253,7 @@ def in_period(period, tyme=None):
                 s.push(not s.pop())
             else:
                 s.push(_check_timespec(item, now))
-    
+
         return s.pop()
     except IndexError:
         raise Exception("bad period (too many . or | operators?): %s" % period)
@@ -342,11 +342,11 @@ def _compose_range(pattern, rule, fill=2):
                 end = int(end[mask:])
             else:
                 end = int(end)
-    
+
             key = "%%0%ii" % fill
             for i in range(start, end + 1):
                 keys.append(key % i)
-    
+
     #print keys
     return keys
 
