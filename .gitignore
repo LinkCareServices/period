@@ -1,0 +1,16 @@
+*.pyc
+*.egg-info
+*.swp
+*.orig
+*.log
+.pypirc
+upload_pypi
+period/RELEASE-VERSION
+RELEASE-VERSION
+
+tmp
+build
+dist
+eggs/
+_build
+
