@@ -90,7 +90,7 @@ class my_build_py(build_py):
         # distutils uses old-style classes, so no super()
         build_py.run(self)
 
-dev_reqs_gen = parse_requirements("dev-requirements.txt",
+test_reqs_gen = parse_requirements("test-requirements.txt",
                                   session=uuid.uuid1())
 reqs_gen = parse_requirements("requirements.txt",
                               session=uuid.uuid1())
@@ -121,5 +121,5 @@ setup(name='period',
       include_package_data=True,
       zip_safe=False,
       test_suite='nose.collector',
-      tests_require=[str(ir.req) for ir in dev_reqs_gen],
+      tests_require=[str(ir.req) for ir in test_reqs_gen],
       install_requires=[str(ir.req) for ir in reqs_gen], )
